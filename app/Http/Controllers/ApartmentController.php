@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Apartment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ApartmentActivationRequest;
+use App\User;
 
 class ApartmentController extends Controller
 {
@@ -14,7 +17,7 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        //
+        //return view('apartment.show');
     }
 
     /**
@@ -24,7 +27,7 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('apartments.create');
     }
 
     /**
@@ -35,7 +38,27 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request ->validate([
+            'name' =>'required'
+
+        ]);
+        
+        //save to database
+        $apartment = auth()->user()->apartment()->create([
+            'name' => $request->input('name'),
+            'information' => $request->input('information'),
+        ]);
+
+        //send mail to admin
+        $admins = User::whereHas('role', function ($q) {
+            $q->where('name', 'admin');
+        })->get(); 
+
+        Mail::to($admins)->send(new ApartmentActivationRequest($apartment));
+         
+
+        return redirect()->route('home')->withMessage('Request for Opening an Apartment has been Sent');
+
     }
 
     /**

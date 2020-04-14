@@ -30,6 +30,9 @@ Route::get('/list/reserve', 'ListController@reserve')->name('list.reserve')->mid
 //Bookings Route Resources
 Route::resource('bookings', 'BookingController')->middleware('auth');
 
+//Apartment Route Resources
+Route::resource('apartments', 'ApartmentController');
+
 //Paypal Routes
 Route::get('paypal/checkout/{booking}', 'PaypalController@getExpressCheckout')->name('paypal.checkout');
 
