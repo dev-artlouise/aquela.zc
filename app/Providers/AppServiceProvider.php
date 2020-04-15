@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Apartment;
+use App\Observers\ApartmentObserver;
+use TCG\Voyager\Facades\Voyager;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Apartment::observe(ApartmentObserver::class);
     }
 }

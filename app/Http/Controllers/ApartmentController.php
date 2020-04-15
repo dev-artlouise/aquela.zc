@@ -69,7 +69,7 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
-        //
+        dd($apartment->owner->name. 'Welcome to your Apartment', $apartment->name);
     }
 
     /**

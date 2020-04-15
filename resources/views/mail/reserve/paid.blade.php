@@ -1,5 +1,5 @@
 @component('mail::message')
-# Introduction
+# Payment Details
 
 Thank you for Booking your Unit
 
@@ -24,8 +24,8 @@ Thank you for Booking your Unit
  
 Total : {{$booking->grand_total}}
 
-@component('mail::button', ['url' => ''])
-Button Text
+@component('mail::button', ['url' => route('home')])
+Return to site
 @endcomponent
 
 Thanks,<br>
