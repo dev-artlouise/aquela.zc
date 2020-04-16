@@ -36,7 +36,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('apartments.create') }}">Open an Apartment</a>
+                            <a class="nav-link" href="{{ route('apartments.create') }}">Host your Apartment</a>
                         </li>
                     </ul>
 

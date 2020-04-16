@@ -31,7 +31,7 @@ Route::get('/list/reserve', 'ListController@reserve')->name('list.reserve')->mid
 Route::resource('bookings', 'BookingController')->middleware('auth');
 
 //Apartment Route Resources
-Route::resource('apartments', 'ApartmentController'); 
+Route::resource('apartments', 'ApartmentController')->middleware('auth'); 
 
 //Paypal Routes
 Route::get('paypal/checkout/{booking}', 'PaypalController@getExpressCheckout')->name('paypal.checkout');
