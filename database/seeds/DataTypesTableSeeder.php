@@ -143,6 +143,42 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2020-04-11 09:38:49',
                 'updated_at' => '2020-04-11 10:13:30',
             ),
+            7 => 
+            array (
+                'id' => 8,
+                'name' => 'apartments',
+                'slug' => 'apartments',
+                'display_name_singular' => 'Apartment',
+                'display_name_plural' => 'Apartments',
+                'icon' => 'voyager-shop',
+                'model_name' => 'App\\Apartment',
+                'policy_name' => '\\App\\Policies\\ApartmentPolicy',
+                'controller' => 'App\\Http\\Controllers\\Admin\\ApartmentController',
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-04-17 06:59:36',
+                'updated_at' => '2020-04-17 07:35:26',
+            ),
+            8 => 
+            array (
+                'id' => 9,
+                'name' => 'units',
+                'slug' => 'units',
+                'display_name_singular' => 'Unit',
+                'display_name_plural' => 'Units',
+                'icon' => 'voyager-home',
+                'model_name' => 'App\\Unit',
+                'policy_name' => '\\App\\Policies\\UnitPolicy',
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2020-04-17 07:03:13',
+                'updated_at' => '2020-04-17 09:11:21',
+            ),
         ));
         
         

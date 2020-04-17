@@ -19,6 +19,10 @@ class CreateUnitsTable extends Migration
             $table->float('price');
             $table->string('unit_image')->nullable();
             $table->string('description');
+
+            $table->unsignedBigInteger('apartment_id')->nullable();
+            $table->foreign('apartment_id')->references('id')->on('apartments')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

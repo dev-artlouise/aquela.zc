@@ -39,6 +39,6 @@ class User extends \TCG\Voyager\Models\User
 
     public function apartment(){
        
-        return $this->hasOne(Apartment::class); 
+        return $this->hasOne(Apartment::class, 'user_id'); 
     }
 }
