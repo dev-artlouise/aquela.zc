@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $units = Unit::take(20)->get();
+        $units = Unit::take(8)->get();
 
         return view('home',['allUnits' => $units]);
     }
