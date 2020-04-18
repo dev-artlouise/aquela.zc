@@ -163,10 +163,11 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
 
-
+       
         /*
          * Package Service Providers...
          */
+        TCG\Voyager\VoyagerServiceProvider::class,
         /*
          * Application Service Providers...
          */

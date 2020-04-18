@@ -76,7 +76,6 @@ class UnitPolicy
     public function delete(User $user, Unit $unit)
     {
         if(empty($unit->apartment)) {
-            
             return false;
         }
         return $user->id == $unit->apartment->user_id;

@@ -7,7 +7,7 @@
     <div class="row">
 
         @foreach ($allUnits as $unit)
-            <div class="col-4">
+            <div class="col-xs-12 col-sm-12 col-md-4">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('dummy.jpg')}}" alt="Card image cap">
                     <div class="card-body">
