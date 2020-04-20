@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Apartment extends Model
 {
-    protected $fillable =['name', 'information'];
+    protected $fillable =['name', 'address', 'city', 'information'];
 
     public function owner(){
 

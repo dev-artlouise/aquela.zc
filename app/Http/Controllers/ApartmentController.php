@@ -39,13 +39,16 @@ class ApartmentController extends Controller
     public function store(Request $request)
     {
         $request ->validate([
-            'name' =>'required'
-
+            'name' => 'required',
+            'address' => 'required',
+            'city'=> 'required',
         ]);
         
         //save to database
         $apartment = auth()->user()->apartment()->create([
             'name' => $request->input('name'),
+            'address' => $request->input('address'),
+            'city' => $request->input('city'),
             'information' => $request->input('information'),
         ]);
 

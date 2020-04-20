@@ -19,8 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/add-to-list/{unit}', 'ListController@add')->name('list.add')->middleware('auth');
+//Route::get('/home/unit-profile/{unitId}','UnitController@show');
 
+Route::get('/add-to-list/{unit}', 'ListController@add')->name('list.add')->middleware('auth');
 //cart list
 Route::get('/list', 'ListController@index')->name('list.index')->middleware('auth');
 Route::get('/list/destroy/{itemId}', 'ListController@destroy')->name('list.destroy')->middleware('auth');
