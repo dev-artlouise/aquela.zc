@@ -10,34 +10,46 @@ class UnitPolicy
 {
     use HandlesAuthorization;
 
-    //check if admin
-    public function before(User $user){
+    //
+    /*public function before($user, $ability){
            
         if ($user->hasRole('admin')){
             return true;
         }
     }
+    */
 
-    //browse for owner only
+    //browse for owner and admin
     public function browse(User $user){
         
-        return $user->hasRole('owner');
+        return $user->hasRole([
+            'owner',
+            'admin'
+            ]);
     }
 
-    //read for owner only
+    
     public function read(User $user, Unit $unit){
 
+        //read for owner only
         if(empty($unit->apartment)) {
             
             return false;
         }
+
+        //allow admin to read
+        if ($user->hasRole('admin')){
+            
+            return true;
+        }
+
         return $user->id == $unit->apartment->user_id;
     }
 
      /**
      * Determine whether the user can delete the unit.
      *
-     * @param  \App\User  $user
+     * @param  \App\User  $user 
      * @param  \App\Unit  $unit
      * @return mixed
      */

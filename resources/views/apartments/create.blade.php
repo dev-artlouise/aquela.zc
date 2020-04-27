@@ -9,14 +9,6 @@
         <div class="form-group">
             <input class="form-control" type="text" name="name" id="" placeholder="Apartment Name">
         </div>
-
-        <div class="form-group">
-            <input class="form-control" type="text" name="address" id="" placeholder="Street number/Barangay">
-        </div>
-
-        <div class="form-group">
-            <input class="form-control" type="text" name="city" id="" placeholder="City">
-        </div>
     
         <div class="form-group">
             <label for="information">Extra Information</label>

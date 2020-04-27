@@ -91,7 +91,6 @@ class BookingController extends Controller
 
         //send email to customer
 
-
         //take user to thank you page
 
         return "Your Unit has been Reserved";

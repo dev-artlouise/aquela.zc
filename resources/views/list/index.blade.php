@@ -18,8 +18,8 @@
                 <tbody>
                     @foreach($listItems as $item)
                         <tr>
-                            <td scope ="row">{{ $item->unit_image }}</td>
-                            <td class="product-name"><a href="#">{{ $item->name}}</a></td>
+                            <td scope ="row"><img src="/storage/{{ $item->unit_image }}" class="img-thumbnail"  alt="apartment unit image"></td>
+                            <td class="product-name">{{ $item->name}}</td>
                             <td class="product-price-cart"><span class="amount">{{ Cart::session(auth()->id())->get($item->id)->getPriceSum()}}</span></td>
                             <td>
                                 <a class="btn btn-danger" href="{{ route('list.destroy', $item->id) }}">Remove</a>
@@ -31,6 +31,6 @@
         
 
         </div>
-        <a class="btn btn-primary" href="{{ route('list.reserve') }}">Proceed to checkout</a>
+        <a class="btn btn-primary" href="{{ route('list.reserve') }}">Proceed to Reservation</a>
  
 @endsection

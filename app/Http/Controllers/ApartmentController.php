@@ -17,7 +17,7 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        //return view('apartment.show');
+       //
     }
 
     /**
@@ -40,15 +40,11 @@ class ApartmentController extends Controller
     {
         $request ->validate([
             'name' => 'required',
-            'address' => 'required',
-            'city'=> 'required',
         ]);
         
         //save to database
         $apartment = auth()->user()->apartment()->create([
             'name' => $request->input('name'),
-            'address' => $request->input('address'),
-            'city' => $request->input('city'),
             'information' => $request->input('information'),
         ]);
 
@@ -71,41 +67,21 @@ class ApartmentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Apartment $apartment)
-    {
-        dd($apartment->owner->name. 'Welcome to your Apartment', $apartment->name);
+    {   
+        return view('apartments.show');
+        //dd($apartment->owner->name. 'Welcome to your Apartment', $apartment->name);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Apartment  $apartment
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Apartment $apartment)
+    
+    public function search(Request $request)
     {
-        //
-    }
+        $query = $request->input('query');
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Apartment  $apartment
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Apartment $apartment)
-    {
-        //
-    }
+        //apartment name and location
+        $apartments = Apartment::WHERE('address', 'LIKE', "%$query%")->get();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Apartment  $apartment
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Apartment $apartment)
-    {
-        //
+        return view('apartments.catalog', compact('apartments'));
     }
+        
+   
 }

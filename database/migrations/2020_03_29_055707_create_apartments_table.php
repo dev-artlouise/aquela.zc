@@ -20,11 +20,10 @@ class CreateApartmentsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
  
             $table->boolean('is_active')->default(false);
-            $table->string('address');
-            $table->string('city');
             $table->text('information')->nullable();
-            $table->float('rating')->nullable();
             $table->timestamps();
+
+            $table->index('user_id');
         });
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Unit;
+use App\Apartment;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,7 +26,13 @@ class HomeController extends Controller
     public function index()
     {
         $units = Unit::take(8)->get();
+        //$apartments = Apartment::inRandomOrder()->take(8)->get();
 
-        return view('home',['allUnits' => $units]);
+       /*return view('home',[
+            'units' => $units,
+        ]);
+        */
+        return view('home')->with('units', $units);
+        
     }
 }

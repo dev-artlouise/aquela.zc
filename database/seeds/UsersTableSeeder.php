@@ -17,12 +17,12 @@ class UsersTableSeeder extends Seeder
         \DB::table('users')->delete();
         
         \DB::table('users')->insert(array (
-           
             0 => 
             array (
-                'id' => 3,
+                'id' => 1,
                 'role_id' => 1,
-                'name' => 'SUPER ADMIN',
+                'first_name' => 'SUPER',
+                'last_name' => 'ADMIN',
                 'email' => 'superadmin@admin.com',
                 'avatar' => 'users/default.png',
                 'email_verified_at' => NULL,
@@ -33,6 +33,7 @@ class UsersTableSeeder extends Seeder
                 'updated_at' => '2020-04-20 08:04:16',
             ),
         ));
-    
+        
+        
     }
 }

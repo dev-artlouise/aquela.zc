@@ -73,8 +73,8 @@ class UnitController extends VoyagerBaseController
             //display the aparment of owner only
             if(auth()->user()->hasRole('owner')){
                 $query->WHERE('apartment_id', auth()->user()->apartment->id);
-            }            
-
+            } 
+        
             // Use withTrashed() if model uses SoftDeletes and if toggle is selected
             if ($model && in_array(SoftDeletes::class, class_uses_recursive($model)) && Auth::user()->can('delete', app($dataType->model_name))) {
                 $usesSoftDeletes = true;

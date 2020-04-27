@@ -152,14 +152,14 @@ class DataTypesTableSeeder extends Seeder
                 'display_name_plural' => 'Apartments',
                 'icon' => 'voyager-shop',
                 'model_name' => 'App\\Apartment',
-                'policy_name' => '\\App\\Policies\\ApartmentPolicy',
+                'policy_name' => NULL,
                 'controller' => 'App\\Http\\Controllers\\Admin\\ApartmentController',
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-04-17 06:59:36',
-                'updated_at' => '2020-04-17 07:35:26',
+                'updated_at' => '2020-04-23 07:05:48',
             ),
             8 => 
             array (
@@ -171,13 +171,13 @@ class DataTypesTableSeeder extends Seeder
                 'icon' => 'voyager-home',
                 'model_name' => 'App\\Unit',
                 'policy_name' => '\\App\\Policies\\UnitPolicy',
-                'controller' => NULL,
+                'controller' => 'App\\Http\\Controllers\\Admin\\UnitController',
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-04-17 07:03:13',
-                'updated_at' => '2020-04-17 09:11:21',
+                'updated_at' => '2020-04-23 07:07:44',
             ),
         ));
         

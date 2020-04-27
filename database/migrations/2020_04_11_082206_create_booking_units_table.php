@@ -26,6 +26,8 @@ class CreateBookingUnitsTable extends Migration
             $table->integer('quantity');
             $table->boolean('is_active')->default(false);
             $table->timestamps();
+
+            $table->index('booking_id','unit_id');
         });
     }
 

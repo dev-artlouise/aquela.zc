@@ -1,9 +1,9 @@
 @component('mail::message')
 # Congratulations !
 
-Your Request for Activation your Apartment has been Approved!
+Your Request for Activation of your Apartment has been Approved!
 
-@component('mail::button', ['url' => route('apartments.show', $apartment->id)])
+@component('mail::button', ['url' => url('/admin/apartments', $apartment->id)])
 Visit Your Apartment
 @endcomponent
 
