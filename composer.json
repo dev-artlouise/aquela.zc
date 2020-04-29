@@ -13,13 +13,14 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
+        "intervention/image": "^2.5",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "orangehill/iseed": "^2.6",
         "srmklive/paypal": "~1.0",
-        "tcg/voyager": "^1.4",
-        "symfony/http-foundation": "^5.0.7"
+        "symfony/http-foundation": "^5.0.7",
+        "tcg/voyager": "^1.4"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

@@ -17,18 +17,27 @@
             @foreach ($units as $unit)
             
                 <div class="col-sm-12 col-xs-12 col-md-4 pb-5">
-                    <div class="card ">
-                        <img src="/storage/{{ $unit->unit_image }}" class="img-thumbnail"  alt="apartment unit image">
+
+                    <div class="card">
+                        <a href="{{ route('units.show', $unit->id) }}">
+                            <img src="/storage/{{ $unit->unit_image }}" class="img-thumbnail"  alt="apartment unit image">
+                        </a>
+
                         <div class="card-body">
-                            <a href="{{ route('units.show', $unit) }}"><h3 class="card-title">{{ $unit->name }}</h3></a>
-                            <h3>{{ $unit->address }}</h3>
-                            <h4>{{ $unit->city }}</h4>
+
+                            <a href="{{ route('units.show', $unit->id) }}">
+                                <div class="unit-name"><h3>{{ $unit->name }}</h3></div>
+                            </a>
+                            <h5>{{ $unit->address }}</h5>
+                            <h5>{{ $unit->city }} City</h5>
                             <h2>₱ {{ $unit->price }}.00</h2>
                         </div>
+                        
                         <div class="card-body">
                             <a href="{{ route('list.add', $unit->id)}}" class="card-link btn btn-outline-success">Add to list</a>
                         </div>
                     </div>
+
                 </div>
 
             @endforeach

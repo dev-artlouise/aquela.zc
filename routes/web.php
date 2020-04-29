@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //units route 
-Route::get('/units/{unit}', 'UnitController@index')->name('units.show');
+Route::get('/units/{unit}', 'UnitController@show')->name('units.show');
 
 
 Route::get('/add-to-list/{unit}', 'ListController@add')->name('list.add')->middleware('auth');
