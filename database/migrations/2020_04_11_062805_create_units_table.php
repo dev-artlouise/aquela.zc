@@ -17,8 +17,17 @@ class CreateUnitsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->float('price');
+            $table->string('address');
+            $table->string('city');
             $table->string('unit_image')->nullable();
             $table->string('description');
+            $table->float('rating')->nullable();
+
+            $table->unsignedBigInteger('apartment_id')->nullable();
+            $table->foreign('apartment_id')->references('id')->on('apartments')->onDelete('cascade');
+
+            $table->index('apartment_id');
+
             $table->timestamps();
         });
     }

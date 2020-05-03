@@ -2,20 +2,20 @@
 
 @section('content')
 
-<h2>Create Apartment/s</h2>
+    <h2>Create Apartment/s</h2>
 
-<form action=" {{ route('apartments.store') }}" method = "POST" >
-    @csrf
-    <div class="form-group">
-        <input class="form-control" type="text" name="name" id="" placeholder="Apartment Name">
-    </div>
+    <form action=" {{ route('apartments.store') }}" method = "POST" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" id="" placeholder="Apartment Name">
+        </div>
+    
+        <div class="form-group">
+            <label for="information">Extra Information</label>
+            <textarea class="form-control" name="information" id="" placeholder="Extra Information "></textarea>
+        </div>   
 
-    <div class="form-group">
-        <label for="information">Information</label>
-        <textarea class="form-control" name="information" id="" placeholder="Apartment Information..."></textarea>
-    </div>   
-
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-</form>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
 
 @endsection

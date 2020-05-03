@@ -385,6 +385,86 @@ class PermissionsTableSeeder extends Seeder
                 'created_at' => '2020-04-11 09:38:49',
                 'updated_at' => '2020-04-11 09:38:49',
             ),
+            46 => 
+            array (
+                'id' => 47,
+                'key' => 'browse_apartments',
+                'table_name' => 'apartments',
+                'created_at' => '2020-04-17 06:59:36',
+                'updated_at' => '2020-04-17 06:59:36',
+            ),
+            47 => 
+            array (
+                'id' => 48,
+                'key' => 'read_apartments',
+                'table_name' => 'apartments',
+                'created_at' => '2020-04-17 06:59:36',
+                'updated_at' => '2020-04-17 06:59:36',
+            ),
+            48 => 
+            array (
+                'id' => 49,
+                'key' => 'edit_apartments',
+                'table_name' => 'apartments',
+                'created_at' => '2020-04-17 06:59:36',
+                'updated_at' => '2020-04-17 06:59:36',
+            ),
+            49 => 
+            array (
+                'id' => 50,
+                'key' => 'add_apartments',
+                'table_name' => 'apartments',
+                'created_at' => '2020-04-17 06:59:36',
+                'updated_at' => '2020-04-17 06:59:36',
+            ),
+            50 => 
+            array (
+                'id' => 51,
+                'key' => 'delete_apartments',
+                'table_name' => 'apartments',
+                'created_at' => '2020-04-17 06:59:36',
+                'updated_at' => '2020-04-17 06:59:36',
+            ),
+            51 => 
+            array (
+                'id' => 52,
+                'key' => 'browse_units',
+                'table_name' => 'units',
+                'created_at' => '2020-04-17 07:03:13',
+                'updated_at' => '2020-04-17 07:03:13',
+            ),
+            52 => 
+            array (
+                'id' => 53,
+                'key' => 'read_units',
+                'table_name' => 'units',
+                'created_at' => '2020-04-17 07:03:13',
+                'updated_at' => '2020-04-17 07:03:13',
+            ),
+            53 => 
+            array (
+                'id' => 54,
+                'key' => 'edit_units',
+                'table_name' => 'units',
+                'created_at' => '2020-04-17 07:03:13',
+                'updated_at' => '2020-04-17 07:03:13',
+            ),
+            54 => 
+            array (
+                'id' => 55,
+                'key' => 'add_units',
+                'table_name' => 'units',
+                'created_at' => '2020-04-17 07:03:13',
+                'updated_at' => '2020-04-17 07:03:13',
+            ),
+            55 => 
+            array (
+                'id' => 56,
+                'key' => 'delete_units',
+                'table_name' => 'units',
+                'created_at' => '2020-04-17 07:03:13',
+                'updated_at' => '2020-04-17 07:03:13',
+            ),
         ));
         
         

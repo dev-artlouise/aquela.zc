@@ -10,10 +10,10 @@ class ApartmentPolicy
 {
     use HandlesAuthorization;
 
-    //check if admin
-    public function before(User $user){
+    //admin authorize everything
+    public function before($user, $ability){
         if ($user->hasRole('admin')){
-            return true;
+          return true;
         }
     }
 

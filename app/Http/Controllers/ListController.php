@@ -24,7 +24,6 @@ class ListController extends Controller
     }
 
     public function index(){
-
         $listItems = \Cart::session(auth()->id())->getContent();
 
         return view('list.index', compact('listItems'));

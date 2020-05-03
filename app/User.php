@@ -16,7 +16,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'email', 'password',
     ];
 
     /**
@@ -39,6 +39,6 @@ class User extends \TCG\Voyager\Models\User
 
     public function apartment(){
        
-        return $this->hasOne(Apartment::class); 
+        return $this->hasOne(Apartment::class, 'user_id'); 
     }
 }
